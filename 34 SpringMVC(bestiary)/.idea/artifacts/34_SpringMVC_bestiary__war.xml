@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="34 SpringMVC(bestiary):war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="bestiary-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="34 SpringMVC(bestiary):war exploded" />
+    </root>
+  </artifact>
+</component>

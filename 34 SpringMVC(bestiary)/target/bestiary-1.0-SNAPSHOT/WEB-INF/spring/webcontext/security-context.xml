@@ -1,0 +1,36 @@
+<b:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/beast/create" access="hasAnyRole('admin','user')" />
+        <intercept-url pattern="/beast/**" access="hasAnyRole('admin','user')"/>
+
+        <form-login login-page="/login"
+                             default-target-url="/loginSucces"
+                             authentication-failure-url="/loginFail"/>
+        <logout logout-success-url="/logOut" />
+        <csrf disabled="true"/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="1" password="1" authorities="ROLE_admin" />
+                <user name="Admin" password="password" authorities="ROLE_admin" />
+            </user-service>
+        </authentication-provider>
+
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="myDb"
+                               users-by-username-query=
+                                       "select login,password,enabled from user where login=?"
+            authorities-by-username-query=
+                                       "select username, role from user_role where username =?  " />
+        </authentication-provider>
+
+    </authentication-manager>
+
+</b:beans>

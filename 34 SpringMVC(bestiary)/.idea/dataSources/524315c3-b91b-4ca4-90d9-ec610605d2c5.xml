@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="database">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="database1"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="library"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="people"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="sakila"/>
+    <schema id="10" parent="1" name="sys"/>
+    <schema id="11" parent="1" name="users"/>
+    <schema id="12" parent="1" name="world"/>
+    <schema id="13" parent="1" name="beast">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="14" parent="2" name="books"/>
+    <table id="15" parent="2" name="new_table"/>
+    <table id="16" parent="2" name="users"/>
+    <table id="17" parent="13" name="beast"/>
+    <table id="18" parent="13" name="beasts"/>
+    <table id="19" parent="13" name="comments"/>
+    <table id="20" parent="13" name="user"/>
+    <table id="21" parent="13" name="user_role"/>
+    <column id="22" parent="14" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="14" name="title">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="24" parent="14" name="status">
+      <Position>3</Position>
+      <DataType>tinyint(2)|0</DataType>
+    </column>
+    <column id="25" parent="14" name="user_ID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="26" parent="14" name="user_ID">
+      <ColNames>user_ID</ColNames>
+    </index>
+    <key id="27" parent="14" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="14" name="books_ibfk_1">
+      <ColNames>user_ID</ColNames>
+      <RefSchemaName>database</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="29" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="15" name="Names">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="31" parent="15" name="Nazwisko">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="32" parent="15" name="Data">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <key id="33" parent="15" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="16" name="nick">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="36" parent="16" name="pass">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="37" parent="16" name="nick_UNIQUE">
+      <ColNames>nick</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="16" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="39" parent="16" name="nick_UNIQUE">
+      <ColNames>nick</ColNames>
+      <UnderlyingIndexName>nick_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="40" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="42" parent="17" name="strength">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="43" parent="17" name="hp">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="44" parent="17" name="category">
+      <Position>5</Position>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="45" parent="17" name="description">
+      <Position>6</Position>
+      <DataType>char(250)|0</DataType>
+    </column>
+    <key id="46" parent="17" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="18" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="49" parent="18" name="strength">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="50" parent="18" name="hp">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="51" parent="18" name="category">
+      <Position>5</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="52" parent="18" name="description">
+      <Position>6</Position>
+      <DataType>char(250)|0</DataType>
+    </column>
+    <key id="53" parent="18" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="19" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="55" parent="19" name="User_Login">
+      <Position>2</Position>
+      <DataType>char(40)|0</DataType>
+    </column>
+    <column id="56" parent="19" name="Beast_Id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="57" parent="19" name="content">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="58" parent="19" name="date_of_adding">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="59" parent="19" name="Beast_Id">
+      <ColNames>Beast_Id</ColNames>
+    </index>
+    <index id="60" parent="19" name="User_Login">
+      <ColNames>User_Login</ColNames>
+    </index>
+    <key id="61" parent="19" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="62" parent="19" name="comments_ibfk_1">
+      <ColNames>User_Login</ColNames>
+      <RefSchemaName>beast</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>login</RefColNames>
+    </foreign-key>
+    <foreign-key id="63" parent="19" name="comments_ibfk_2">
+      <ColNames>Beast_Id</ColNames>
+      <RefSchemaName>beast</RefSchemaName>
+      <RefTableName>beast</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="64" parent="20" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="65" parent="20" name="login">
+      <Position>2</Position>
+      <DataType>char(40)|0</DataType>
+    </column>
+    <column id="66" parent="20" name="password">
+      <Position>3</Position>
+      <DataType>char(40)|0</DataType>
+    </column>
+    <column id="67" parent="20" name="enabled">
+      <Position>4</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <index id="68" parent="20" name="login">
+      <ColNames>login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="69" parent="20" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="70" parent="20" name="login">
+      <ColNames>login</ColNames>
+      <UnderlyingIndexName>login</UnderlyingIndexName>
+    </key>
+    <column id="71" parent="21" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="72" parent="21" name="username">
+      <Position>2</Position>
+      <DataType>char(40)|0</DataType>
+    </column>
+    <column id="73" parent="21" name="role">
+      <Position>3</Position>
+      <DataType>char(40)|0</DataType>
+    </column>
+    <index id="74" parent="21" name="username">
+      <ColNames>username</ColNames>
+    </index>
+    <key id="75" parent="21" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="76" parent="21" name="user_role_ibfk_1">
+      <ColNames>username</ColNames>
+      <RefSchemaName>beast</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>login</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
