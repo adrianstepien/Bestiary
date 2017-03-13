@@ -1,0 +1,10 @@
+ID,name,strength,hp,category,description
+1,"Garrosh Hellscream",230,200,Orc,"'Garrosh Hellscream was the son of Grom Hellscream and former chieftain of the Warsong clan"
+2,Skaven,17,200,Skaven,"The Skaven, sometimes known as the Ratmen, the Ratkin or the Children of the Horned Rat"
+3,Vampire,159,300,Vampire,"Vampires are immortal beings that have spread the loathsome curse of Undeath across the realms of Men for centuries."
+4,Goblin,123,124,Goblin,"Goblins, usually called Gobboz by their Orc cousins, are the smallest and perhaps the most numerous of the Greenskin race."
+5,Warewolf,211,321,Warewolf,"Stories about Werecreatures are common in the Old World, though not many of those tales portray them as anything but evil beasts."
+6,Orc,123,231,Orc,"The Greenskins are a highly primitive and warlike race of barbarians and raiders that occupy much of the Eastern Hemisphere of the Warhammer World."
+7,Keslain,421,231,Human,"Kaslain is a tall man and physically strong – mighty enough to wield his symbol of office, the Reikhammer, as its creator intended."
+15,Adrian,131,12,Human,"A very strong person"
+16,"Illidan Stormrage",200,213,Demon,"Illidan Stormrage is a night elf born Demon Hunter and the founder of the Illidari. He was the former self-proclaimed Lord of Outland, ruling from the Black Temple until his defeat in."
